@@ -1,8 +1,8 @@
 OpenAgenda for Bolt
 ===================
 
-This [bolt.cm](https://bolt.cm/) extension get easier to display
-[OpenAgenda](https://openagenda.com/?lang=en) events on your website (OpenAgenda: Get an efficient public calendar now).
+This [bolt.cm](https://bolt.cm/) extension makes easier to display
+[OpenAgenda](https://openagenda.com/?lang=en) events on your website (_OpenAgenda: Get an efficient public calendar now_).
 
 Extension uses also [CalendR](http://yohan.giarel.li/CalendR/index.html) PHP lib,
 to manage calendar view and load json OpenAgenda events on it.
@@ -107,7 +107,7 @@ All OpenAgenda data could be retrieve with `getJSON` method.
 ```
 
 #### oa_nextEvents function
-If you want to display a particular event of `test1`agenda, use `oa_event`
+If you want to display a particular event of `test1` agenda, use `oa_event`
 twig function. It returns an event.
 
 ```(twig)
@@ -179,11 +179,11 @@ twig function. It returns an event.
 ```
 
 #### Extension Config
-Your configuration could be access from twig template with:
+Your configuration could be accessed from twig template with:
 `{% set extension_config = app['bolt-openagenda.config'] %}`
 
 ### Routing example
-You could add some routes on Bolt to manage your agenda pages:
+You can add some routes on Bolt to manage your agenda pages:
 ```(yml)
 agendaevent:
     path: /agenda/evenet/{agendaalias}/{eventuid}/{eventslug}
@@ -216,7 +216,7 @@ agenda:
 ---
 
 ### Credits
-Extension icon inspired by [work of Rockicon](https://thenounproject.com/term/monthly-calendar/523605/) on Noun Project
+Extension icon is inspired by [work of Rockicon](https://thenounproject.com/term/monthly-calendar/523605/) on Noun Project
 
 ### License
 This Bolt extension is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
