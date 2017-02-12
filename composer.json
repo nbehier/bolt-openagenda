@@ -1,6 +1,6 @@
 {
     "name": "bolt/bolt-openagenda",
-    "description": "Get easier to display OpenAgenda events on your website",
+    "description": "Bolt Extension to make easier to display OpenAgenda events on your website",
     "type": "bolt-extension",
     "keywords": [
         "agenda", "OpenAgenda", "CalendR", "calendar", "event"
