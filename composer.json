@@ -1,5 +1,5 @@
 {
-    "name": "bolt/bolt-openagenda",
+    "name": "leskis/bolt-openagenda",
     "description": "Bolt Extension to make easier to display OpenAgenda events on your website",
     "type": "bolt-extension",
     "keywords": [
