@@ -1,0 +1,47 @@
+{
+    "name": "bolt/bolt-openagenda",
+    "description": "Get easier to display OpenAgenda events on your website",
+    "type": "bolt-extension",
+    "keywords": [
+        "agenda", "OpenAgenda", "CalendR", "calendar", "event"
+    ],
+    "require": {
+        "bolt/bolt": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Béhier-Dévigne",
+            "homepage": "https://leskis.net",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Bolt\\Extension\\Leskis\\BoltOpenAgenda\\": "src",
+            "CalendR\\": "lib/yohang/CalendR"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bolt\\Extension\\Leskis\\BoltOpenAgenda\\Tests\\": "tests",
+            "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
+        }
+    },
+    "extra": {
+        "bolt-assets": "web",
+        "bolt-class": "Bolt\\Extension\\Leskis\\BoltOpenAgenda\\BoltOpenAgendaExtension",
+        "bolt-icon":  "assets/icon.png",
+        "bolt-screenshots": [
+            "assets/screenshot1.png",
+            "assets/screenshot2.png",
+            "assets/screenshot3.png"
+        ]
+    }
+ }
+}
