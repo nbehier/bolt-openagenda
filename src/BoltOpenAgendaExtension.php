@@ -5,6 +5,7 @@ namespace Bolt\Extension\Leskis\BoltOpenAgenda;
 use Bolt\Extension\Leskis\BoltOpenAgenda\OAEventsProvider;
 use Bolt\Extension\SimpleExtension;
 use CalendR\Extension\Silex\Provider\CalendRServiceProvider;
+use CalendR\Extension\Twig\CalendRExtension;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
@@ -67,6 +68,14 @@ class BoltOpenAgendaExtension extends SimpleExtension
                 'oaevents' => new OAEventsProvider($app['bolt-openagenda.config'])
             )
         ));
+
+        $app['twig'] = $app->extend(
+            'twig',
+            function (\Twig_Environment $twig) use ($app) {
+                $twig->addExtension(new CalendRExtension($app['calendr']) );
+                return $twig;
+            }
+        );
     }
 
     /**
