@@ -42,7 +42,8 @@ class OAEventsProvider implements ProviderInterface
             [
                 'passed' => true,
                 'from'   => $begin,
-                'to'     => $end
+                'to'     => $end,
+                'limit'  => 300
             ]
         );
 
@@ -50,7 +51,7 @@ class OAEventsProvider implements ProviderInterface
     }
 
     /**
-     * Fetch next 10 events
+     * Fetch next 20 events in the 2 next months
      *
      * @param  array  $options Options, like agenda_id
      * @return array           Collection of OpenAgenda Event
@@ -58,12 +59,15 @@ class OAEventsProvider implements ProviderInterface
     public function getNextEvents(array $options = array())
     {
         $events = array();
+        //$now = new \DateTime('2017-06-01');
+        //$nowPlus2Months = $now->add(new \DateInterval('P60D'));
 
         if ( ! array_key_exists('agenda_id', $options) || trim($options['agenda_id']) == '' ) {
             throw new OAException("Agenda id missing");
         }
 
-        $events = $this->requestOA($options['agenda_id'], ['limit' => 10]);
+        $events = $this->requestOA($options['agenda_id'], ['limit' => 50]);
+        //$events = $this->requestOA($options['agenda_id'], ['limit' => 20, 'from' => $now, 'to' => $nowPlus2Months]);
 
         return $events;
     }
